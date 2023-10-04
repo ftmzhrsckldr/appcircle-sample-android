@@ -4,6 +4,8 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+final Logger logger = LoggerFactory.getLogger(LoggingTest.class);
+
 /**
  * Example local unit test, which will execute on the development machine (host).
  *
