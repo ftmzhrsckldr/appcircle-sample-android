@@ -13,7 +13,7 @@ public class URLValidatorUnitTest {
 
     @Test
     public void invalid_url_test() {
-        boolean isValid = URLValidator.isValid("htp");
+        boolean isValid = URLValidator.isValid("https://www.google.com");
         assertFalse(isValid);
     }
 
