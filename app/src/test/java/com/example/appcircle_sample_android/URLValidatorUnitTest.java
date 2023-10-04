@@ -22,4 +22,9 @@ public class URLValidatorUnitTest {
         boolean isValid = URLValidator.isValid("https://www.google.com");
         assertTrue(isValid);
     }
+
+    @Test
+    public void failed_test() {
+        assertTrue(false);
+    }
 }
