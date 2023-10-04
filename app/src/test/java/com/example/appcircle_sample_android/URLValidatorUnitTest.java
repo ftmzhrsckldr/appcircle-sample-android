@@ -24,12 +24,6 @@ public class URLValidatorUnitTest {
     }
 
     @Test
-    public void failed_test() {
-        assertTrue(false);
-        logger.warn("message");
-    }
-
-    @Test
     public void warn_test() {
         logger.warn("Warning test message.");
     }
