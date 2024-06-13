@@ -7,7 +7,7 @@ android {
         vectorDrawables.useSupportLibrary = true
         minSdkVersion 21
         targetSdkVersion 29
-        
+
         if (System.getenv("AC_APPCIRCLE")) {
             def buildNumber = System.getenv("AC_BUILD_NUMBER")
             versionName = "1.0." + buildNumber
@@ -16,9 +16,9 @@ android {
             versionCode 2
             versionName "1.0.1"
         }
-        
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField "String", "APPCIRCLE_API_URL", "\"${System.env.AC_API_URL}\""
+        buildConfigField "String", "APPCIRCLE_API_URL", "\"${System.getenv("AC_API_URL")}\""
     }
 
     flavorDimensions 'appName'
@@ -44,9 +44,13 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField "String", "BUILD_TYPE", "\"debug\""
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "BUILD_TYPE", "\"release\""
         }
     }
 }
