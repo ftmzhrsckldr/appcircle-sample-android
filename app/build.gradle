@@ -23,7 +23,7 @@ android {
 
     flavorDimensions 'appName'
     productFlavors {
-        smartface {
+        starter {
             dimension 'appName'
             applicationId "com.appcircle.StarterApp"
             resValue "string", "app_name", "StarterApp"
@@ -32,7 +32,7 @@ android {
                     appIcon: "@drawable/ic_launcher"
             ]
         }
-        appcircle {
+        corporate {
             dimension 'appName'
             applicationId "com.appcircle.CorporateApp"
             resValue "string", "app_name", "CorporateApp"
