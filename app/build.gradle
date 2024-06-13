@@ -18,8 +18,7 @@ android {
         }
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField "String", "APPCIRCLE_API_URL", "\"${System.getenv("AC_API_URL")}\""
-    }
+        buildConfigField "String", "APPCIRCLE_API_URL", "\"${System.env.AC_API_URL}\""    }
 
     flavorDimensions 'appName'
     productFlavors {
