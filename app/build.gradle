@@ -25,18 +25,18 @@ android {
     productFlavors {
         smartface {
             dimension 'appName'
-            applicationId "com.smartface.SmartfaceApp"
-            resValue "string", "app_name", "SmartfaceApp"
-            resValue "string", "labelText", "Smartface.io"
+            applicationId "com.appcircle.StarterApp"
+            resValue "string", "app_name", "StarterApp"
+            resValue "string", "labelText", "Appcircle Starter"
             manifestPlaceholders = [
                     appIcon: "@drawable/ic_launcher"
             ]
         }
         appcircle {
             dimension 'appName'
-            applicationId "com.appcircle.AppcircleApp"
-            resValue "string", "app_name", "AppcircleApp"
-            resValue "string", "labelText", "Appcircle.io"
+            applicationId "com.appcircle.CorporateApp"
+            resValue "string", "app_name", "CorporateApp"
+            resValue "string", "labelText", "Appcircle Corporate"
             manifestPlaceholders = [
                     appIcon: "@mipmap/ic_launcher"
             ]
