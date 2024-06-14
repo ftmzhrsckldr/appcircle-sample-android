@@ -29,7 +29,7 @@ android {
             resValue "string", "app_name", "StarterApp"
             resValue "string", "labelText", "Appcircle Starter"
             manifestPlaceholders = [
-                    appIcon: "@drawable/ic_launcher"
+                    appIcon: "@mipmap/ic_launcher"
             ]
         }
         corporate {
