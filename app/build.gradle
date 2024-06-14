@@ -29,7 +29,7 @@ android {
             resValue "string", "app_name", "StarterApp"
             resValue "string", "labelText", "Appcircle Starter"
             manifestPlaceholders = [
-                    appIcon: "@mipmap/ic_launcher"
+                    appIcon: "@drawable/ic_launcher"
             ]
         }
         corporate {
@@ -38,7 +38,7 @@ android {
             resValue "string", "app_name", "CorporateApp"
             resValue "string", "labelText", "Appcircle Corporate"
             manifestPlaceholders = [
-                    appIcon: "@mipmap/ic_launcher"
+                    appIcon: "@drawable/ic_launcher"
             ]
         }
     }
