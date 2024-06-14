@@ -25,8 +25,8 @@ android {
     productFlavors {
         starter {
             dimension 'appName'
-            applicationId "com.appcircle.StarterApp"
-            resValue "string", "app_name", "StarterApp"
+            applicationId "com.appcircle.AppcircleStarterUser"
+            resValue "string", "app_name", "Appcircle Starter User"
             resValue "string", "labelText", "Appcircle Starter"
             manifestPlaceholders = [
                     appIcon: "@drawable/ic_launcher"
@@ -34,8 +34,8 @@ android {
         }
         corporate {
             dimension 'appName'
-            applicationId "com.appcircle.CorporateApp"
-            resValue "string", "app_name", "CorporateApp"
+            applicationId "com.appcircle.AppcircleCorporateUser"
+            resValue "string", "app_name", "Appcircle Corporater User"
             resValue "string", "labelText", "Appcircle Corporate"
             manifestPlaceholders = [
                     appIcon: "@drawable/ic_launcher"
