@@ -6,8 +6,8 @@ sauce:
   region: eu-central-1
   concurrency: 2
 espresso:
-  app: .saucelabs/app-debug-13.apk
-  testApp: .saucelabs/app-debug-androidTest-2.apk
+  app: ./app-debug-13.apk
+  testApp: ./app-debug-androidTest-2.apk
 suites:
 - name: espresso - Google Pixel .* - Android GoogleAPI Emulator
   devices:
