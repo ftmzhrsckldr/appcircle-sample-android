@@ -4,6 +4,10 @@ android {
     compileSdkVersion 33
     buildToolsVersion "33.0.0"
 
+    buildFeatures {
+        buildConfig = true
+    }
+
     defaultConfig {
         vectorDrawables.useSupportLibrary = true
         applicationId "com.appcircle.appcircle_sample_android"
