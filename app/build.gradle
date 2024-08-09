@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 33
-    buildToolsVersion "33.0.0"
-
     buildFeatures {
         buildConfig = true
     }
+    compileSdkVersion 33
+    buildToolsVersion "33.0.0"
+
 
     defaultConfig {
         vectorDrawables.useSupportLibrary = true
@@ -34,9 +34,6 @@ android {
         }
     }
 
-    viewBinding {
-        enabled = true
-    }
 }
 
 dependencies {
