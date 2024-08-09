@@ -5,6 +5,7 @@ android {
         buildConfig = true
     }
     compileSdkVersion 33
+    namespace 'org.appcircle.sample.android'
     buildToolsVersion "33.0.0"
 
 
