@@ -37,7 +37,13 @@ public class MainActivity extends AppCompatActivity {
         try {
             new GetAccessTokenTask().execute();
         } catch (Exception e) {
-            e.printStackTrace(); 
+            e.printStackTrace();
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Error")
+               .setMessage("An error occurred while accessing the token. Please try again.")
+               .setPositiveButton("OK", (dialog, which) -> dialog.dismiss())
+               .show();
         }
 
     }
