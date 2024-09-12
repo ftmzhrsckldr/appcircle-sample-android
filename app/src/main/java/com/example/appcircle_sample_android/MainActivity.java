@@ -38,12 +38,13 @@ public class MainActivity extends AppCompatActivity {
             new GetAccessTokenTask().execute();
         } catch (Exception e) {
             e.printStackTrace();
-
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setTitle("Error")
-               .setMessage("An error occurred while accessing the token. Please try again.")
-               .setPositiveButton("OK", (dialog, which) -> dialog.dismiss())
-               .show();
+            
+            new AlertDialog.Builder(MainActivity.this)
+                    .setTitle("Error")
+                    .setMessage("An error occurred while trying to get the access token.")
+                    .setPositiveButton(android.R.string.ok, null)
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
         }
 
     }
