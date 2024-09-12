@@ -34,7 +34,12 @@ public class MainActivity extends AppCompatActivity {
         newFragment.setActivity(this);
         this.replaceFragment(newFragment, false);
 
-        // new GetAccessTokenTask().execute();
+        try {
+            new GetAccessTokenTask().execute();
+        } catch (Exception e) {
+            e.printStackTrace(); 
+        }
+
     }
 
     private void showUpdateDialog(final String storeURL, final String profileId, final AppVersion appVersion, final String accessToken, final String userEmail) {
