@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -18,16 +19,18 @@ import java.util.List;
 import android.content.Intent;
 import android.net.Uri;
 import android.content.DialogInterface;
-import androidx.appcompat.app.AlertDialog;
 
 
 public class MainActivity extends AppCompatActivity {
     private AppService appService = new AppService();
+    String error  = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         showHomeItem(true);
         SampleFragment newFragment = new SampleFragment();
@@ -35,10 +38,21 @@ public class MainActivity extends AppCompatActivity {
         this.replaceFragment(newFragment, false);
 
         try {
-            new GetAccessTokenTask().execute();
+            new AlertDialog.Builder(MainActivity.this)
+                    .setTitle("Login starts")
+                    .setMessage("Start checking updates.")
+                    .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            new GetAccessTokenTask().execute();
+                        }
+                    })
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
         } catch (Exception e) {
             e.printStackTrace();
-            
+            Log.d("onCreate", "onCreate: log in failed!");
+
             new AlertDialog.Builder(MainActivity.this)
                     .setTitle("Error")
                     .setMessage("An error occurred while trying to get the access token.")
@@ -82,8 +96,24 @@ public class MainActivity extends AppCompatActivity {
                 return response;
             } catch (IOException e) {
                 e.printStackTrace();
+                Log.d("Authentication", "doInBackground: failed get token!!");
                 return null;
+            } catch (Exception e) {
+                e.printStackTrace();
+                error = e.toString();
             }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(AuthModel authModel) {
+            super.onPostExecute(authModel);
+            new AlertDialog.Builder(MainActivity.this)
+                    .setTitle("An Error Occured!")
+                    .setMessage(error)
+                    .setPositiveButton(android.R.string.ok, null)
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
         }
     }
 

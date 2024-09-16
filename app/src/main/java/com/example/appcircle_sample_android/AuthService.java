@@ -27,7 +27,7 @@ public class AuthService {
             .readTimeout(30, TimeUnit.SECONDS)
             .build();
 
-    public static AuthModel getAccessToken() throws IOException {
+    public static AuthModel getAccessToken() throws Exception {
         HttpUrl url = new HttpUrl.Builder()
                 .scheme("https")
                 .host(Environment.STORE_URL)
@@ -64,6 +64,8 @@ public class AuthService {
 
             Gson gson = new Gson();
             return gson.fromJson(responseBody, AuthModel.class);
+        } catch (Exception e) {
+            throw e;
         }
     }
 }
