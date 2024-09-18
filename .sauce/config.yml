@@ -11,11 +11,11 @@ espresso:
 suites:
 - name: espresso - Google Pixel .* - Android GoogleAPI Emulator
   devices:
-  - name: Google Pixel .*
+  - name: Samsung Galaxy S9
   emulators:
   - name: Android GoogleAPI Emulator
     platformVersions:
-    - "14.0"
+    - "10.0"
 artifacts:
   download:
     match:
