@@ -29,16 +29,15 @@ android {
     }
 
     buildTypes {
-        getByName("release") {
-            isMinifyEnabled = true
-            proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
 
-        getByName("debug") {
-            applicationIdSuffix = ".debug"
-            isDebuggable = true
+        debug {
+            applicationIdSuffix ".debug"
+            debuggable true
         }
-    }
 
 }
 
