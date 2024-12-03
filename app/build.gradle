@@ -38,7 +38,7 @@ android {
             applicationIdSuffix ".debug"
             debuggable true
         }
-
+    }
 }
 
 dependencies {
