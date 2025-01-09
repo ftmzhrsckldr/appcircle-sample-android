@@ -2,8 +2,9 @@
 
 buildscript {
     repositories {
-        google()
-        mavenCentral()
+        maven {
+            url 'https://nexus.burakberk.dev/repository/maven'
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:8.7.3'
@@ -12,8 +13,9 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
-        mavenCentral()
+        maven {
+            url 'https://nexus.burakberk.dev/repository/maven'
+        }
     }
 }
 
