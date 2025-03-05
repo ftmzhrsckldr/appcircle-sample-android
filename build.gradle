@@ -3,7 +3,7 @@
 buildscript {
     repositories {
         maven {
-            url 'https://nexus.burakberk.dev/repository/maven'
+            url 'https://nexus.appcircle.io/repository/maven-central/'
         }
     }
     dependencies {
@@ -14,7 +14,7 @@ buildscript {
 allprojects {
     repositories {
         maven {
-            url 'https://nexus.burakberk.dev/repository/maven'
+            url 'https://nexus.appcircle.io/repository/maven-central/'
         }
     }
 }
