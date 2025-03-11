@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         vectorDrawables.useSupportLibrary = true
-        applicationId "com.appcircle.appcircle_sample_android"
+        applicationId "com.appcircle.appgallery_sample_android"
         minSdkVersion 21
         targetSdkVersion 33
         
