@@ -5,13 +5,13 @@ android {
         buildConfig = true
     }
     compileSdkVersion 33
-    namespace 'com.example.appcircle_sample_android'
+    namespace 'com.appcircle.sample_android.huawei'
     buildToolsVersion "33.0.0"
 
 
     defaultConfig {
         vectorDrawables.useSupportLibrary = true
-        applicationId "com.appcircle.appcircle_sample_android"
+        applicationId "com.appcircle.sample_android.huawei"
         minSdkVersion 21
         targetSdkVersion 33
         
