@@ -6,7 +6,7 @@ android {
     }
     compileSdkVersion 33
     namespace 'com.appcircle.sample_android.huawei'
-    buildToolsVersion "33.0.0"
+    buildToolsVersion "33.0.1"
 
 
     defaultConfig {
