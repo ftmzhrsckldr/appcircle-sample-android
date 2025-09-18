@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FF8E34</color>
-    <color name="colorPrimaryDark">#EA7D34</color>
+    <!-- Company A Colors (Default Build) -->
+    <color name="colorPrimary">COMPANYA_PRIMARY</color>
+    <color name="colorPrimaryDark">COMPANYA_PRIMARY_DARK</color>
+    <color name="colorAccent">COMPANYA_ACCENT</color>
+    
+    <!-- Common Colors -->
     <color name="colorWhite">#FFFFFF</color>
-    <color name="colorAccent">#D81B60</color>
     <color name="colorBlack">#000000</color>
+    
+    <!-- Company B Colors (for reference/replacement) -->
+    <color name="companyb_primary">COMPANYB_PRIMARY</color>
+    <color name="companyb_primary_dark">COMPANYB_PRIMARY_DARK</color>
+    <color name="companyb_accent">COMPANYB_ACCENT</color>
 </resources>

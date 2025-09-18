@@ -1,0 +1,30 @@
+{
+  "companya": {
+    "colors": {
+      "COMPANYA_PRIMARY": "#FF8E34",
+      "COMPANYA_PRIMARY_DARK": "#EA7D34", 
+      "COMPANYA_ACCENT": "#D81B60"
+    },
+    "strings": {
+      "COMPANYA_APP_NAME": "Company A App"
+    },
+    "manifest": {
+      "COMPANYA_ICON": "@mipmap/ic_launcher_companya",
+      "COMPANYA_ROUND_ICON": "@mipmap/ic_launcher_round_companya"
+    }
+  },
+  "companyb": {
+    "colors": {
+      "COMPANYA_PRIMARY": "#2196F3",
+      "COMPANYA_PRIMARY_DARK": "#1976D2",
+      "COMPANYA_ACCENT": "#FF5722"
+    },
+    "strings": {
+      "COMPANYA_APP_NAME": "Company B App"  
+    },
+    "manifest": {
+      "COMPANYA_ICON": "@mipmap/ic_launcher_companyb",
+      "COMPANYA_ROUND_ICON": "@mipmap/ic_launcher_round_companyb"
+    }
+  }
+}
